@@ -14,6 +14,8 @@ app.register_blueprint(views) # url_prefix="/views" Inkluderer /views i url. Nyt
 
 if __name__ == '__main__':
     app.run(debug=True, port=8000) #Dev mode - Run in terminal with "python app.py"
+    # app.run(debug=False, port=8000) #Prod mode
+
 
  # LEARNING NOTES
  #  virtualenv flaskEnv -p python3 (Establishes venv named flaskEnv)
