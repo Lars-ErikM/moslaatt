@@ -4,17 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- HVORFOR virker ikke link til lokale filer? -->
+    <!-- Refererer inn lokale bootstrap filer -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
     <script defer src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
     <!-- MED / i front av adresse tolker browser det til være en absolutt adresse fra PCens root (AI) -->
-<!-- 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script> -->
 
     <title>Moslått.no</title>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='logo.png') }}">
 </head>
-<body style="height:100vh">
+<!-- Fjern evt height fra body  -->
+<body style="height:100vh"> 
     <div>
       <!-- block that could be overwriten when this file is used as template -->
       {% block content %}
@@ -39,23 +38,3 @@
     ></script> 
 </body>
 </html>
-
-<!-- 
-NOTES
-
-
-* h2.display-2.text-center ->Enter (VSC fills in)
-* class for padding: p-2, p-3, p-4, p-5 (0-5)
-* class for margin: m-2, m-3, m-4, m-5 (0-5)
-* class for text alignment: text-center, text-end, text-start
-* class for font size: display-1, display-2, display-3, display-4, display-5, display-6
-* class for font weight: fw-bold, fw-normal, fw-light
-* class for text decoration: text-decoration-underline, text-decoration-line
-
-* Copilot: Press ctrl + I
-
-
-TODO
-
-
--->
